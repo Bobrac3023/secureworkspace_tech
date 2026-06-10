@@ -112,13 +112,8 @@ header {
 
     width: 100%;
 
-    /* Responsive height */
-    height: 50vw;
+    aspect-ratio: 16 / 9;
 
-    /* Prevent too small */
-    min-height: 350px;
-
-    /* Prevent too large */
     max-height: 700px;
 
     overflow: hidden;
@@ -129,7 +124,6 @@ header {
     height: 100%;
 
     object-fit: cover;
-    display: block;
 }
 /* =====================================
    FOOTER
