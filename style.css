@@ -1,0 +1,120 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: #032b4a;
+    border-bottom: 2px solid white;
+}
+
+/* =========================
+   NAVBAR CONTAINER
+========================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 30px;
+    min-height: 80px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo a {
+    text-decoration: none;
+    color: white;
+
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   NAVIGATION MENU
+========================= */
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    gap: 30px;
+
+    margin-left: 50px;
+    margin-right: auto;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #bfc8d0;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+/* Current Page */
+
+.nav-links a.active {
+    color: white;
+}
+
+/* Hover Effect */
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* =========================
+   TAGLINE
+========================= */
+
+.tagline {
+    color: white;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+
+    text-align: right;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        margin: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tagline {
+        text-align: center;
+    }
+}
