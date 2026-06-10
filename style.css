@@ -9,12 +9,21 @@
 }
 
 /* =====================================
-   BODY
+   HTML & BODY
 ===================================== */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: #032b4a;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
     line-height: 1.6;
 }
 
@@ -106,8 +115,13 @@ header {
 }
 
 /* =====================================
-   HERO VIDEO SECTION
+   MAIN CONTENT
 ===================================== */
+
+main {
+    background-color: #032b4a;
+}
+
 /* =====================================
    HERO VIDEO SECTION
 ===================================== */
@@ -130,21 +144,58 @@ header {
 
     display: block;
 }
+
+/* =====================================
+   HERO TEXT OVERLAY
+===================================== */
+
+.hero-text {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(0, 0, 0, 0.55);
+
+    padding: 20px 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+}
+
 /* =====================================
    FOOTER
 ===================================== */
 
-
 .footer {
     background-color: #032b4a;
     color: white;
+
     padding: 20px 30px;
+
+    border-top: 1px solid white;
 }
 
 .footer-content {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     flex-wrap: wrap;
 
     gap: 20px;
@@ -161,6 +212,7 @@ header {
 
 .footernavigation {
     display: flex;
+
     list-style: none;
 
     gap: 20px;
@@ -169,17 +221,25 @@ header {
     padding: 0;
 }
 
+.footernavigation li {
+    list-style: none;
+}
+
 .footernavigation a {
     color: white;
-    font-size: 1.5rem;
+
+    font-size: 1.6rem;
+
     text-decoration: none;
 
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .footernavigation a:hover {
     color: #ffd700;
+    transform: scale(1.15);
 }
+
 /* =====================================
    MOBILE RESPONSIVE
 ===================================== */
@@ -189,12 +249,14 @@ header {
     .navbar {
         flex-direction: column;
         gap: 20px;
+
         text-align: center;
     }
 
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
+
         gap: 15px;
     }
 
@@ -204,7 +266,7 @@ header {
     }
 
     .hero-video {
-        height: clamp(280px, 65vw, 450px);
+        height: 350px;
     }
 
     .hero-text h1 {
@@ -215,11 +277,16 @@ header {
         font-size: 1rem;
     }
 
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .footernavigation {
-        gap: 20px;
+        justify-content: center;
     }
 
     .footernavigation a {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }
